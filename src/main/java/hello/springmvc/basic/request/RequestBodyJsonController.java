@@ -39,7 +39,7 @@ public class RequestBodyJsonController {
         response.getWriter().write("ok");
     }
 
-    // 2. @RequestBody (json -> string으로 받음)
+    // 2. @RequestBody (json -> string으로 받음 == string converter)
     // @ResponseBody(string converter)
     @ResponseBody
     @PostMapping("/request-body-json-v2")
