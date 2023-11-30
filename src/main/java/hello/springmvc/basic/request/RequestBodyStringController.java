@@ -41,7 +41,7 @@ public class RequestBodyStringController {
         responseWriter.write("ok");
     }
 
-    // 3. HttpEntity 사용
+    // 3. HttpEntity 사용 (string converter)
     @PostMapping("/request-body-string-v3")
     public HttpEntity<String> requestBodyStringV3(HttpEntity<String> httpEntity) throws IOException {
 
@@ -51,7 +51,7 @@ public class RequestBodyStringController {
         return new HttpEntity<>("ok");
     }
 
-    // 4. @RequestBody, @ResponseBody 사용
+    // 4. @RequestBody(string converter), @ResponseBody(string converter)
     @ResponseBody
     @PostMapping("/request-body-string-v4")
     public String requestBodyStringV4(@RequestBody String messageBody) throws IOException {

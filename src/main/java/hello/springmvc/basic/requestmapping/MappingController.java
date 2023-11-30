@@ -45,7 +45,7 @@ public class MappingController {
      * @PathVariable("userId") userId -> @PathVariable userId
      */
     @GetMapping("/mapping/{userId}")
-    public String mappingPath(@PathVariable ("userId")String userId){
+    public String mappingPath(@PathVariable String userId){
         log.info("mappingPath userId={}",userId);
         return "ok";
     }
